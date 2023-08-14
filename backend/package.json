@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "formidable": "^3.5.0",
+    "fs": "^0.0.1-security",
+    "handbrake-js": "^7.0.0",
+    "mongoose": "^7.4.1",
+    "multer": "^1.4.5-lts.1",
+    "react-scripts": "^5.0.1",
+    "socket.io": "^4.7.1",
+    "uuid": "^3.4.0",
+    "uuidv4": "^6.2.13",
+    "ws": "^8.13.0"
+  },
+  "name": "conversion-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}
