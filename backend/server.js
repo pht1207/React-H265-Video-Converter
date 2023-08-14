@@ -11,17 +11,17 @@ app.use(bodyParser.json());
 // Parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
-
+/* Uncomment if you want to use https, then comment out the 'app.listen' below
 https
         .createServer({
-          cert:fs.readFileSync('/etc/letsencrypt/live/transcoder.parkert.dev/fullchain.pem'),
-          key:fs.readFileSync('/etc/letsencrypt/live/transcoder.parkert.dev/privkey.pem'),
-          ca:fs.readFileSync('/etc/letsencrypt/live/transcoder.parkert.dev/chain.pem'),
+          cert:fs.readFileSync('/etc/letsencrypt/live/{your websites directory}/fullchain.pem'),
+          key:fs.readFileSync('/etc/letsencrypt/live/{your websites directory}/privkey.pem'),
+          ca:fs.readFileSync('/etc/letsencrypt/live/{your websites directory}/chain.pem'),
 			},app)
         .listen(port, () => {
                 console.log('server is running on port'+port)
         });
-
+*/
 
 // Require the upload middleware
 const upload = require('./upload');
