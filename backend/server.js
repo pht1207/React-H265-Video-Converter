@@ -3,25 +3,12 @@ const app = express();
 const port = 5000;
 let cors = require('cors');
 const fs = require('fs');
-const https = require('https')
 app.use(cors())
 const bodyParser = require('body-parser');
 // Parse application/json
 app.use(bodyParser.json());
 // Parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
-
-/* Uncomment if you want to use https, then comment out the 'app.listen' below
-https
-        .createServer({
-          cert:fs.readFileSync('/etc/letsencrypt/live/{your websites directory}/fullchain.pem'),
-          key:fs.readFileSync('/etc/letsencrypt/live/{your websites directory}/privkey.pem'),
-          ca:fs.readFileSync('/etc/letsencrypt/live/{your websites directory}/chain.pem'),
-			},app)
-        .listen(port, () => {
-                console.log('server is running on port'+port)
-        });
-*/
 
 // Require the upload middleware
 const upload = require('./upload');
