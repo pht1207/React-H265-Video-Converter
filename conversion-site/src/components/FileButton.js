@@ -101,8 +101,7 @@ export default function FileButton(props) {
       newFormdata.append('uuid', uuid);
       setSubmitted(true)
       setIsUploading(true);
-      const response = await axios.post("https://transcoder.parkert.dev:5000/upload", newFormdata,{
-      //const response = await axios.post("http://192.168.1.130:5000/upload", newFormdata,{
+      const response = await axios.post("https://transcoder.parkert.dev/backend/upload", newFormdata,{
           timeout: 0,
         responseType: 'blob',
         //Used to display upload progress to client
@@ -121,8 +120,7 @@ export default function FileButton(props) {
             }, deletionDelay);
         
             async function progressPostRequest(){
-              //const url = 'http://192.168.1.130:5000/transcodedFile'
-              const url = 'https://transcoder.parkert.dev:5000/transcodedFile'
+              const url = 'https://transcoder.parkert.dev/backend/transcodedFile'
               const uuidObj = {uuid: uuid}
               const progressResponse = await axios.post(url, uuidObj);
               setTranscodeProgress(progressResponse.data.progress);
